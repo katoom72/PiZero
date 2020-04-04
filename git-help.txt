@@ -1,0 +1,9 @@
+# Usefull GIT commands and sources
+# --------------------------------
+
+# Command line method to add SSH keys to github account: curl -u "username" https://api.github.com -> 
+#    /users/keys "add keyvalue pair {
+#    "title": "addrandomname",
+#    "key": "ssh-rsa AAA..." 
+#	 }" 
+						
