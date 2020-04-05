@@ -3,9 +3,9 @@
 
 # resources:
 
-# https://linuxcommando.blogspot.com/2013/10/how-to-connect-to-wpawpa2-wifi-network.html   			"setp-by-step instruction on how to setup wpa BUT USED DRIVER IS INCORRECT - please refer to toshalinfotech resource (dirver name nl80211 bottom of the page)"
-# https://www.toshalinfotech.com/Blogs/ID/69/SOLVED-wpa_supplicant-ioctl-SIOCSIWENCODEEXT-Invalid-argument 	"fix for lotc errors and has appropiate driver: nl80211 to use in run command"
-# https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md				"offical setup information (2 previous resources where sufficent for me)"
+# https://linuxcommando.blogspot.com/2013/10/how-to-connect-to-wpawpa2-wifi-network.html   			"setp-by-step instruction on how to setup wpa. BUT USED DRIVER IS INCORRECT - please refer to toshalinfotech resource (dirver name nl80211 bottom of the page)"
+# https://www.toshalinfotech.com/Blogs/ID/69/SOLVED-wpa_supplicant-ioctl-SIOCSIWENCODEEXT-Invalid-argument 	"fix for LOTC errors and has appropiate driver: nl80211 to use in run command"
+# https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md				"official setup information (2 previous resources where sufficent for me)"
 
 
 sudo -s  								# getting root access
