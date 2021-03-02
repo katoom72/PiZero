@@ -3,15 +3,15 @@
 
 # resources:
 
-# https://linuxcommando.blogspot.com/2013/10/how-to-connect-to-wpawpa2-wifi-network.html   			"setp-by-step instruction on how to setup wpa. BUT USED DRIVER IS INCORRECT - please refer to toshalinfotech resource (dirver name nl80211 bottom of the page)"
+# https://linuxcommando.blogspot.com/2013/10/how-to-connect-to-wpawpa2-wifi-network.html   			        "step-by-step instruction on how to setup wpa. BUT USED DRIVER IS INCORRECT - please refer to toshalinfotech resource (dirver name nl80211 bottom of the page)"
 # https://www.toshalinfotech.com/Blogs/ID/69/SOLVED-wpa_supplicant-ioctl-SIOCSIWENCODEEXT-Invalid-argument 	"fix for LOTC errors and has appropiate driver: nl80211 to use in run command"
-# https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md				"official setup information (2 previous resources where sufficent for me)"
+# https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md				            "official setup information (2 previous resources where sufficent for me)"
 
 
-sudo -s  								# getting root access
-sudo ip link set wlan0 up 						# raise the wireless interface called "wlan0". (Fill in apropiate wireless device)
-wpa_passphrase wifi2.4 >> /etc/wpa_supplicant.conf  			# make the passphrase and append it to the wpa_supplciant.conf file.
-cat /etc/wpa_supplicant.conf 						# print out the .conf file. "step not required"
+sudo -s  								                                # getting root access
+sudo ip link set wlan0 up 						                        # raise the wireless interface called "wlan0". (Fill in apropiate wireless device)
+wpa_passphrase wifi2.4 >> /etc/wpa_supplicant.conf  			        # make the passphrase and append it to the wpa_supplciant.conf file.
+cat /etc/wpa_supplicant.conf 						                    # print out the .conf file. "step not required"
 sudo wpa_supplicant -B -D nl80211 -i wlan0 -c /etc/wpa_supplicant.conf  # run the wpa_supp.conf file -B means run wpa_supplicant in the background. -D specifies the wireless driver. "wext" is the generic driver. !!!!BUT DOESNT WORK - USE THE "nl80211" DRIVER INSTEAD!!!! -c specifies the path for the configuration file.
-sudo reboot 								# reboot the system
+sudo reboot 								                            # reboot the system
 
