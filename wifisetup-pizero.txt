@@ -10,7 +10,7 @@
 
 sudo -s  								                                # getting root access
 sudo ip link set wlan0 up 						                        # raise the wireless interface called "wlan0". (Fill in apropiate wireless device)
-wpa_passphrase wifi2.4 >> /etc/wpa_supplicant.conf  			        # make the passphrase and append it to the wpa_supplciant.conf file.
+wpa_passphrase [insert SSID] >> /etc/wpa_supplicant.conf  			        # make the passphrase and append it to the wpa_supplciant.conf file.
 cat /etc/wpa_supplicant.conf 						                    # print out the .conf file. "step not required"
 sudo wpa_supplicant -B -D nl80211 -i wlan0 -c /etc/wpa_supplicant.conf  # run the wpa_supp.conf file -B means run wpa_supplicant in the background. -D specifies the wireless driver. "wext" is the generic driver. !!!!BUT DOESNT WORK - USE THE "nl80211" DRIVER INSTEAD!!!! -c specifies the path for the configuration file.
 sudo reboot 								                            # reboot the system
